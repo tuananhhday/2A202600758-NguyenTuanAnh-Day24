@@ -1,0 +1,138 @@
+{
+  "total_questions": 50,
+  "per_distribution": {
+    "factual": {
+      "count": 20,
+      "faithfulness": 0.8947350000000001,
+      "answer_relevancy": 0.92326,
+      "context_precision": 0.27779,
+      "context_recall": 0.9072899999999999,
+      "avg_score": 0.75076875
+    },
+    "multi_hop": {
+      "count": 20,
+      "faithfulness": 0.60001,
+      "answer_relevancy": 0.51754,
+      "context_precision": 0.26773500000000006,
+      "context_recall": 0.5938899999999999,
+      "avg_score": 0.49479375000000003
+    },
+    "adversarial": {
+      "count": 10,
+      "faithfulness": 0.6663,
+      "answer_relevancy": 0.5308200000000001,
+      "context_precision": 0.22722000000000003,
+      "context_recall": 0.42526,
+      "avg_score": 0.4624
+    }
+  },
+  "failure_clusters": {
+    "matrix": {
+      "faithfulness": {
+        "factual": 0,
+        "multi_hop": 0,
+        "adversarial": 0
+      },
+      "context_recall": {
+        "factual": 0,
+        "multi_hop": 0,
+        "adversarial": 0
+      },
+      "context_precision": {
+        "factual": 20,
+        "multi_hop": 16,
+        "adversarial": 8
+      },
+      "answer_relevancy": {
+        "factual": 0,
+        "multi_hop": 4,
+        "adversarial": 2
+      }
+    },
+    "dominant_failure_distribution": "factual",
+    "dominant_failure_metric": "context_precision",
+    "insight": "Distribution 'factual' có nhiều failure nhất. Metric 'context_precision' là điểm yếu chủ đạo. Gợi ý: Add reranking or metadata filter"
+  },
+  "bottom_10": [
+    {
+      "rank": 1,
+      "question_id": 25,
+      "distribution": "multi_hop",
+      "question": "Lương thử việc của nhân viên Junior mức cao nhất là bao nhiêu?",
+      "avg_score": 0.1862,
+      "worst_metric": "answer_relevancy"
+    },
+    {
+      "rank": 2,
+      "question_id": 22,
+      "distribution": "multi_hop",
+      "question": "Nếu cần mua một chiếc laptop 30 triệu cho nhân viên mới, ai phê duyệt và cần gì từ phòng CNTT?",
+      "avg_score": 0.19,
+      "worst_metric": "answer_relevancy"
+    },
+    {
+      "rank": 3,
+      "question_id": 33,
+      "distribution": "multi_hop",
+      "question": "Nhân viên Manager có thâm niên 12 năm: tổng phụ cấp hàng tháng và số ngày phép năm theo v2024 là bao nhiêu?",
+      "avg_score": 0.1975,
+      "worst_metric": "answer_relevancy"
+    },
+    {
+      "rank": 4,
+      "question_id": 41,
+      "distribution": "adversarial",
+      "question": "Nhân viên được nghỉ bao nhiêu ngày phép năm?",
+      "avg_score": 0.2036,
+      "worst_metric": "answer_relevancy"
+    },
+    {
+      "rank": 5,
+      "question_id": 49,
+      "distribution": "adversarial",
+      "question": "Theo chính sách nghỉ phép cũ (v2023), nhân viên được nghỉ bao nhiêu ngày? Còn chính sách nào đang có hiệu lực hiện tại?",
+      "avg_score": 0.2443,
+      "worst_metric": "answer_relevancy"
+    },
+    {
+      "rank": 6,
+      "question_id": 50,
+      "distribution": "adversarial",
+      "question": "Nhân viên Manager có thể dùng VPN cá nhân (như NordVPN) khi WFH để tăng bảo mật thêm không?",
+      "avg_score": 0.2673,
+      "worst_metric": "context_precision"
+    },
+    {
+      "rank": 7,
+      "question_id": 34,
+      "distribution": "multi_hop",
+      "question": "Nhân viên tạm ứng 4 triệu và một nhân viên khác tạm ứng 7 triệu: quy trình phê duyệt khác nhau thế nào?",
+      "avg_score": 0.2741,
+      "worst_metric": "answer_relevancy"
+    },
+    {
+      "rank": 8,
+      "question_id": 39,
+      "distribution": "multi_hop",
+      "question": "So sánh yêu cầu mật khẩu giữa policy v1.0 và v2.0 về độ dài tối thiểu, thời hạn đổi và MFA.",
+      "avg_score": 0.2988,
+      "worst_metric": "context_precision"
+    },
+    {
+      "rank": 9,
+      "question_id": 48,
+      "distribution": "adversarial",
+      "question": "Nhân viên thử việc có được hưởng bảo hiểm sức khỏe PVI không?",
+      "avg_score": 0.3228,
+      "worst_metric": "context_precision"
+    },
+    {
+      "rank": 10,
+      "question_id": 42,
+      "distribution": "adversarial",
+      "question": "Thâm niên bao nhiêu năm thì được cộng thêm ngày phép?",
+      "avg_score": 0.3363,
+      "worst_metric": "context_precision"
+    }
+  ]
+}
